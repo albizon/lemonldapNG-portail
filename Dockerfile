@@ -16,7 +16,7 @@ RUN echo "# Install LemonLDAP::NG source repo" && \
 	
 RUN apt-get -y update && \
     echo "# Install LemonLDAP::NG packages" && \
-    apt-get -y install nginx lemonldap-ng cron anacron liblasso-perl libio-string-perl && \
+    apt-get -y install nginx lemonldap-ng cron anacron liblasso-perl libio-string-perl lemonldap-ng-fastcgi-server && \
     echo "# Install LemonLDAP::NG TOTP requirements" && \
     apt-get -y install libconvert-base32-perl libdigest-hmac-perl && \
 	echo "\ndaemon off;" >> /etc/nginx/nginx.conf
