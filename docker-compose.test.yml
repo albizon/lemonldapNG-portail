@@ -1,3 +1,20 @@
-sut:
-  build: .
-  command: run_tests.sh
+version: '3'
+services:
+  postgres:
+    image: postgres:10
+    environment:
+      POSTGRES_USER: lemonldap-ng
+      POSTGRES_PASSWORD: lemonldap-ng
+      POSTGRES_DB: lemonldap-ng
+      
+  redis:
+    image: redis:3.2-alpine
+      
+  sut:
+    build: .
+    command: /entrypoint.sh
+    ports:
+      - "80:80"
+    depends_on:
+      - postgres
+      - redis
