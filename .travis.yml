@@ -13,7 +13,7 @@ before_install:
   - sleep 120
   - docker exec -t -i portail /bin/bash -c "cat /etc/lemonldap-ng/lemonldap-ng.ini"
   - docker exec -t -i portail /bin/bash -c "ls /var/lib/lemonldap-ng/conf"
-  - docker exec -t -i portail /bin/bash -c "cat /var/lib/lemonldap-ng/conf/lmConf.json"
+  - docker exec -t -i portail /bin/bash -c "cat /var/lib/lemonldap-ng/conf/lmConf-1.json"
   - docker logs -t --details portail
 
 script:
