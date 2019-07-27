@@ -7,7 +7,7 @@ before_install:
   - docker build -t abizon/lemonldapng-portail .
   - docker run -d --name portail -p 127.0.0.1:80:80 abizon/lemonldapng-portail /bin/sh -c "/entrypoint.sh"
   - docker ps -a
-  - sleep 20
+  - sleep 120
   - docker logs -t --details portail
 
 script:
