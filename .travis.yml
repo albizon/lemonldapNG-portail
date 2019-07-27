@@ -1,5 +1,8 @@
 language: yaml
 
+addons:
+  firefox: "56.0"
+  
 services:
   - docker
 
